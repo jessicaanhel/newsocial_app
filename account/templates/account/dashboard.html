@@ -2,5 +2,6 @@
 {% block title %}Panel główny{% endblock %}
 {% block content %}
     <h1>Panel główny</h1>
-    <p>Witaj w panelu głównym.</p>
+    <p>Witaj w panelu głównym, {{ request.user }}!</p>
+<p> Zostałeś zalogowany do wyjątkowego serwisu, w którym możesz rozwijać swoją identyczność :)</p>
 {% endblock %}

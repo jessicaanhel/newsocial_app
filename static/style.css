@@ -1,0 +1,67 @@
+body {
+    
+    background-color: antiquewhite;
+    color:cadetblue;
+    display: inline;
+}  
+
+h1 {
+    font-size: 25px;
+}  
+
+h2, h3, h4, h5, h6 {
+    color:darkgoldenrod;
+}
+
+img{
+        width: 320px
+    
+}
+.text {;
+                background-color: antiquewhite;
+            }
+
+
+.obrazek {
+    cursor: pointer;
+
+}
+
+.display_none {
+    
+    display: none;
+    
+}
+
+.flexcontainer {
+            display: flex;
+            background-color: darkgoldenrod;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-items: center;
+            position: fixed;
+            top: 100;
+            left: 30px;
+    
+        
+            
+            
+        }
+        
+.flexcontainer > div {
+            background-color: #f1f1f1;
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+            width: 60px
+        }
+
+#paragraf_test {
+                color:darkred;
+                width: 30vw;
+            }
+#link_mail {
+    
+    color:aqua;
+}
