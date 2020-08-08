@@ -25,12 +25,12 @@ class ServiceCreateView(CreateView):
 
 
 class ServiceView(ListView):
-    template_name = 'services.html',
+    template_name = 'services.html'
     model = Services
 
 
 class CategoryView(ListView):
-    template_name ='category.html',
+    template_name ='category.html'
     model = Category
 
 
