@@ -26,7 +26,7 @@ class ServiceForm(ModelForm):
         fields = '__all__'
 
 
-# class ServiceEditForm(ModelForm):
-#     class Meta:
-#         model = Services
-#         fields = ('title', 'photo', 'category', 'price', 'city', 'deadline', 'description')
+class ServiceEditForm(ModelForm):
+    class Meta:
+        model = Services
+        fields = ('title', 'photo', 'category', 'price', 'city', 'deadline', 'description')
