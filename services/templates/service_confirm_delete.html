@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <form method="post">
+        {% csrf_token %}
+        <p>Jestes pewny że usuwasz '{{object.title}}' z bazy?</p>
+        <p><input type="submit" value="Usuń"></p>
+    </form>
+{% endblock %}

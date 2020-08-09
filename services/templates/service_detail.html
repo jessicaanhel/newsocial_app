@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load service_extras %}
+
+{% block content %}
+    {{service|attr_as_p:'title' }}
+    {{service|attr_as_P:'photo' }}
+    {{service|attr_as_p:'rating' }}
+    {{service|attr_as_P:'bought' }}
+    {{service|attr_as_p:'owner' }}
+    {{service|attr_as_P:'category' }}
+    {{service|attr_as_p:'price' }}
+    {{service|attr_as_P:'city' }}
+    {{service|attr_as_p:'deadline' }}
+    {{service|attr_as_P:'description' }}
+{% endblock %}>

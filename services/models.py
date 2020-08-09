@@ -21,7 +21,7 @@ class Services(models.Model):
     rating = models.IntegerField(null=True)
     #rating = suma wszystkich ocen dzielona przez liczbe zakupow danej usługi
     bought = models.IntegerField(null=True)
-    owner = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     category = models.ForeignKey(Category, on_delete=models.DO_NOTHING)
     price = models.FloatField()
     city = models.ForeignKey(Cities, on_delete=models.SET_NULL, null=True)

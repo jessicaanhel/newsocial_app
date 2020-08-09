@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
+{% load service_extras %}
 
 {% block content %}
 <h1> Welcome to our NewSocial app!</h1>
 <ul>
     {% for service in object_list %}
     <li>
-        {{ service.title }} ({{service.price}}) - {{service.rating}} {{service.category.name}}
+        {% service_format service %}
     </li>
     {% endfor %}
 </ul>
