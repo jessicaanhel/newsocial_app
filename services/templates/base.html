@@ -1,5 +1,5 @@
 {% load bootstrap4 %}
-{% load static %}
+<!--{% load static %}-->
 
 <html {% if LANGUAGE_CODE %}lang="{{ LANGUAGE_CODE }}"{% endif %}>
 
@@ -13,13 +13,13 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container fixed">
-        <a class="navbar-brand" href="{% url 'services_list' %}">ListaUslug</a>
+        <a class="navbar-brand" href="/service_list.html">ListaUslug</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="{% url 'services_list' %}">
+            <a class="nav-item nav-link active" href="/service_list.html">
               Services
              </a>
           </div>

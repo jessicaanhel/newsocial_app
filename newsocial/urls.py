@@ -22,6 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('account/', include('account.urls')),
     path('services/', include('services.urls')),
+    path('/', include('services.urls')),
 ]
 
 #if settings.DEBUG:

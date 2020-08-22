@@ -34,7 +34,7 @@ class Services(models.Model):
 
 class Basket(models.Model):
     buyer = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    items = models.ManyToManyField(Services)
+    items = models.ForeignKey(Services, on_delete=models.DO_NOTHING)
 
 
 

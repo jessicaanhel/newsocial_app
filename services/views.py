@@ -7,6 +7,7 @@ from django.urls import reverse_lazy
 
 from services.models import Services, Category, Basket
 from services.forms import ServiceForm, ServiceEditForm
+from services.templatetags.service_extras import service_format
 
 LOGGER = getLogger()
 
@@ -88,11 +89,14 @@ class IndexView(ServiceListView):
 Koszyk
 """
 
-def add_to_basket(request, pk):
-    if request.method == "POST":
-        basket = Basket.objects.filter(buyer=request.user).first()
-        basket.items.add(Services.objects.filter(id=pk).first())
-    return redirect()
+def add_to_basket(request):
+    print('Funkcja uruchomiona')
+    # if request.method == "POST":
+    #     basket = Basket.objects.filter(buyer=request.user).first()
+    #     basket.items.add(Services.objects.filter(id=pk).first())
+    basket_id_user = request.user
+    basket_id_service = request.service.pk
+    return render(request, 'basket.html', {'object_list': basket_id_user, 'service_obj': basket_id_service})
 
 
 def order(request):

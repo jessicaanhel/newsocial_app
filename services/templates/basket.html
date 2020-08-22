@@ -1,10 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
+{% load service_extras %}
+
+{% block content %}
+
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<p>Kupujący: {{object_list:'buyer'}}</p>
+<p>Produkt: {{service_obj:'item'}}</p>
 </body>
 </html>

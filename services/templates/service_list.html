@@ -10,7 +10,8 @@
         <a href="{% url 'services:service_detail' service.pk %}">{{ service.title }}</a>
         ({{service.price}}) - {{service.rating}} {{service.category.name}}
         <a href="{% url 'services:service_edit' service.pk %}">Edit</a>
-        <a href="{% url 'services:service_delete' service.pk %}"Delete</a>
+        <a href="{% url 'services:service_delete' service.pk %}">Delete</a>
+        <a href="{% url 'services:add_to_basket' %}">add to basket</a>
     </li>
     {% endfor %}
 </ul>

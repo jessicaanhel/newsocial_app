@@ -17,5 +17,6 @@ urlpatterns = [
     path('create', views.ServiceCreateView.as_view(), name='service_create'),
     #path('edit/<pk>', views.edit, name='service_edit'),
     path('edit2/<pk>', views.UpdateServiceView.as_view(), name='service_edit'),
-    path('delete/<pk>', views.ServiceDeleteView.as_view(), name='service_delete')
+    path('delete/<pk>', views.ServiceDeleteView.as_view(), name='service_delete'),
+    path('basket', views.add_to_basket, name='add_to_basket')
 ]
