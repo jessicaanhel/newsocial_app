@@ -2,14 +2,14 @@
 {% load service_extras %}
 
 {% block content %}
-    {{service|attr_as_p:'title' }}
-    {{service|attr_as_P:'photo' }}
-    {{service|attr_as_p:'rating' }}
-    {{service|attr_as_P:'bought' }}
-    {{service|attr_as_p:'owner' }}
-    {{service|attr_as_P:'category' }}
-    {{service|attr_as_p:'price' }}
-    {{service|attr_as_P:'city' }}
-    {{service|attr_as_p:'deadline' }}
-    {{service|attr_as_P:'description' }}
+    {{object|attr_as_p:'title' }}
+    {{object|attr_as_p:'photo' }}
+    {{object|attr_as_p:'rating' }}
+    {{object|attr_as_p:'bought' }}
+    {{object|attr_as_p:'owner' }}
+    {{object|attr_as_p:'category' }}
+    {{object|attr_as_p:'price' }}
+    {{object|attr_as_p:'city' }}
+    {{object|attr_as_p:'deadline' }}
+    {{object|attr_as_p:'description' }}
 {% endblock %}>

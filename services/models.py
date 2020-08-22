@@ -32,5 +32,11 @@ class Services(models.Model):
     def __str__(self):
         return self.title
 
+class Basket(models.Model):
+    buyer = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    items = models.ManyToManyField(Services)
+
+
+
 
 

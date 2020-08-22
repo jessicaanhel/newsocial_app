@@ -6,11 +6,11 @@
 <ul>
     {% for service in object_list %}
     <li>
-        {% service_format service short=True %}
-         <a href="{% url 'services:service_detail' service.pk %}">detail</a>
-        <a href="{% url 'services:service_edit' service.pk %}">edit</a>
-        <a href="{% url 'services:service_delete' service.pk %}">delete</a>
-        {{ service.title }} ({{service.price}}) - {{service.rating}} {{service.category.name}}
+<!--        {% service_format service short=True %}-->
+        <a href="{% url 'services:service_detail' service.pk %}">{{ service.title }}</a>
+        ({{service.price}}) - {{service.rating}} {{service.category.name}}
+        <a href="{% url 'services:service_edit' service.pk %}">Edit</a>
+        <a href="{% url 'services:service_delete' service.pk %}"Delete</a>
     </li>
     {% endfor %}
 </ul>
