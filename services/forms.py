@@ -5,7 +5,7 @@ CharField, DateField, IntegerField, ModelForm, ImageField, ModelChoiceField, Tex
 )
 from django.core.exceptions import ValidationError
 
-from services.models import Category, Cities, Services
+from services.models import Category, Cities, Services, Basket
 
 class FutureDateField(DateField):
 
@@ -30,3 +30,8 @@ class ServiceEditForm(ModelForm):
     class Meta:
         model = Services
         fields = ('title', 'photo', 'category', 'price', 'city', 'deadline', 'description')
+
+class AddToBasketForm(ModelForm):
+    class Meta:
+        model = Basket
+        fields = ('ilosc',)

@@ -23,7 +23,7 @@ class Services(models.Model):
     bought = models.IntegerField(null=True)
     owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     category = models.ForeignKey(Category, on_delete=models.DO_NOTHING)
-    price = models.FloatField()
+    price = models.DecimalField(max_digits=9, decimal_places=2)
     city = models.ForeignKey(Cities, on_delete=models.SET_NULL, null=True)
     deadline = models.DateTimeField()
     description = models.TextField(null=True, blank=True)
@@ -33,8 +33,11 @@ class Services(models.Model):
         return self.title
 
 class Basket(models.Model):
-    buyer = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    items = models.ForeignKey(Services, on_delete=models.DO_NOTHING)
+    buyer = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.DO_NOTHING)
+    #seller = models.ForeignKey(Services.owner, on_delete=models.CASCADE)
+    id_service = models.ForeignKey(Services, on_delete=models.DO_NOTHING)
+    ilosc = models.FloatField(max_length=3, null=True, blank=True)
+    #price = models.ForeignKey(Services.price, on_delete=models.DO_NOTHING)
 
 
 
