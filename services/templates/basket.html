@@ -3,12 +3,21 @@
 
 {% block content %}
 
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<p>Kupujący: {{object_list:'buyer'}}</p>
-<p>Produkt: {{service_obj:'item'}}</p>
-</body>
-</html>
+    <title>LISTA ZAKUPÓW</title>
+<div class="post">
+    {% if zamowienie.data_publikacji %}
+    <div class="date">
+        {{ zamowienie.data_publikacji}}
+    </div>
+    {% ednif %}
+
+   <a href="{% url services:service_edit" pk="zamowienie.pk %}">
+       <span></span>
+   </a>
+<p>Kupujący: {{ zamowienie.ilosc}}</p>
+<p>Produkt: {{}}</p>
+
+</div>
+
+{% endblock content %}
+

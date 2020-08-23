@@ -31,7 +31,8 @@ class ServiceEditForm(ModelForm):
         model = Services
         fields = ('title', 'photo', 'category', 'price', 'city', 'deadline', 'description')
 
-class AddToBasketForm(ModelForm):
-    class Meta:
-        model = Basket
-        fields = ('ilosc',)
+#
+# class BasketForm(ModelForm):
+#     class Meta:
+#         model = Basket
+#         fields = ['id_service', 'ilosc']
